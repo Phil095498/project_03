@@ -1,0 +1,52 @@
+body {
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+button:disabled {
+    background: rgba(83, 83, 83, 0.5);
+}
+
+button {
+    background: dodgerblue;
+    padding: 7px;
+    border-radius: 6px;
+    font-weight: bolder;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+.heading {
+    font-size: 38px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+.subtext {
+    margin-bottom: 7px;
+    color: rgba(0, 0, 0, 0.60);
+}
+
+.form-center {
+    margin-left: 30%;
+}
+
+.margin-tb-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.margin-l15 {
+    margin-left: 15px;
+}
+
+.margin-b15 {
+    margin-bottom: 15px;
+}
+
+.showData {
+    padding: 20px;
+    margin-top: 25px;
+    background: azure;
+}
