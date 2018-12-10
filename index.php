@@ -13,69 +13,21 @@
 <body class="container-fluid">
     <form class="form-center" action="" method="post">
         <span class="row heading">Anmeldung</span>
-        <span class="row subtext">Bitte registrieren Sie sich mit ihren persönlichen Daten!</span>
         <div class="inputs row">
-            <label class="col-sm-12">Wählen Sie Ihr Geschlecht!</label>
-            <select class="col-sm-3 margin-b15" required>
-                <option selected disabled>Bitte wählen</option>
-                <option value="Weiblich">Weiblich</option>
-                <option value="Männlich">Männlich</option>
-            </select>
             <div class="row margin-b15">
-                <span class="col-sm-12">Geben Sie Ihren Nachnamen ein!</span>
+                <span class="col-sm-12">Geben Sie Ihren Nutzernamen ein!</span>
                 <div  class="col-sm-10">
-                    <input  type="text"  placeholder="Nachname"  name="name" required>
+                    <input  type="text"  placeholder="username"  name="name" required>
                 </div>
             </div>
             <div class="row margin-b15">
-                <span class="col-sm-12">Geben Sie Ihren Vornamen ein!</span>
+                <span class="col-sm-12">Geben Sie Ihr Passwort ein!</span>
                 <div  class="col-sm-10">
-                    <input  type="text" placeholder="Vorname"  name="vorname" required>
+                    <input  type="password" placeholder="password"  name="password" required>
                 </div>
             </div>
-
-            <div class="row margin-b15">
-                <span class="col-sm-12">Geben sie Ihr Alter ein!</span>
-                <div  class="col-sm-10">
-                    <input  type="number" placeholder="Alter"  name="alter" required>
-                </div>
-            </div>
-
-            <div class="row margin-b15">
-                <span class="col-sm-12">Geben sie Ihre Postleitzahl ein!</span>
-                <div  class="col-sm-10">
-                    <input  type="number" placeholder="Postleitzahl"  name="zip" required>
-                </div>
-            </div>
-
-            <div class="row margin-b15">
-                <span class="col-sm-12">Geben sie Ihren Wohnort ein!</span>
-                <div  class="col-sm-10">
-                    <input  type="text" placeholder="Wohnort"  name="city" required>
-                </div>
-            </div>
-
-            <div class="row margin-b15">
-                <span class="col-sm-12">Geben sie Ihre Straße mit Hausnummer ein!</span>
-                <div  class="col-sm-10">
-                    <input  type="text" placeholder="Straße / Hausnr."  name="street" required>
-                </div>
-            </div>
-
-            <div class="row margin-tb-15">
-                <input type="checkbox" onchange="document.getElementById('sendButton').disabled = !this.checked;" id="checkbox" name="checkbox" >
-                <label class="col-sm-10" for="checkbox">Ich bin damit einverstanden, dass meine Daten übertragen werden.</label>
-            </div>
-            <button type="submit" id="sendButton" class="btn-submit" disabled>Daten senden</button>
+            <button type="submit" id="sendButton" class="btn-submit" disabled>Anmelden</button>
             <button type="reset" class="btn-reset margin-l15">Reset</button>
-
-            <div class="row">
-              <span class="col-sm-8 showData">
-                    Falls Sie Ihre personenbezogenen Daten abfragen wollen, klicken Sie bitte
-                    <a class="link" href="showData.php">hier</a>
-                    .
-                </span>
-            </div>
         </div>
     </form>
 </body>
