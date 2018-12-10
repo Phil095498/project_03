@@ -9,7 +9,7 @@
 	<link href="css/grid.css" rel="stylesheet">
 </head>
 <body class="container-fluid">
-	<form class="form-center" action="" method="post">
+	<form class="form-center" action="pdfCreator.php" method="post">
 		<span class="row heading">Personenbezogene Daten abfragen</span>
 		<span class="row subtext">Bitte registrieren Sie sich mit ihren persönlichen Daten!</span>
 		<div class="inputs row">
