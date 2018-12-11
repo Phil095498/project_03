@@ -31,13 +31,6 @@ if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
 
     if (FALSE !== $result){
         $entries = ldap_get_entries($ldap_connection, $result);
-        // Uncomment the below if you want to write all entries to debug somethingthing
-        //var_dump($entries);
-        //die();
-
-        //Create a table to display the output
-        $table = '<h2>AD User Results</h2></br>';
-        $table .= '<table border = "1"><tr bgcolor="#cccccc"><td>Username</td><td>Last Name</td><td>First Name</td><td>Company</td><td>Department</td><td>Office Phone</td><td>Fax</td><td>Mobile</td><td>DDI</td><td>E-Mail Address</td><td>Home Phone</td></tr>';
 
         //For each account returned by the search
         for ($x=0; $x<$entries['count']; $x++){
@@ -194,7 +187,123 @@ if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
 								}
 							}
 
-                $table .= "<tr><td><strong>" . $LDAP_samaccountname . "</strong></td><td>" . $LDAP_LastName . "</td><td>" . $LDAP_FirstName . "</td><td>" . $LDAP_CompanyName . "</td><td>" . $LDAP_Department . "</td><td>" . $LDAP_OfficePhone . "</td><td>" . $LDAP_OfficeFax . "</td><td>" . $LDAP_CellPhone . "</td><td>" . $LDAP_DDI . "</td><td>" . $LDAP_InternetAddress . "</td><td>" . $LDAP_HomePhone . "</td></tr>";
+							//office
+							$LDAP_physicaldeliveryofficename = "";
+
+							if (!empty($entries[$x]['physicaldeliveryofficename'][0])) {
+								$LDAP_physicaldeliveryofficename = $entries[$x]['physicaldeliveryofficename'][0];
+								if ($LDAP_physicaldeliveryofficename == "NULL") {
+									$LDAP_physicaldeliveryofficename = "";
+								}
+							}
+
+							//telephonenumber
+							$LDAP_telephonenumber = "";
+							if (!empty($entries[$x]['telephonenumber'][0])) {
+								$LDAP_telephonenumber = $entries[$x]['telephonenumber'][0];
+								if ($LDAP_telephonenumber == "NULL") {
+									$LDAP_telephonenumber = "";
+								}
+							}
+
+							//mail
+							$LDAP_mail = "";
+							if (!empty($entries[$x]['mail'][0])) {
+								$LDAP_mail = $entries[$x]['mail'][0];
+								if ($LDAP_mail == "NULL") {
+									$LDAP_mail = "";
+								}
+							}
+
+							//wwwhomepage
+							$LDAP_wwwhomepage = "";
+							if (!empty($entries[$x]['wwwhomepage'][0])) {
+								$LDAP_wwwhomepage = $entries[$x]['wwwhomepage'][0];
+								if ($LDAP_wwwhomepage == "NULL") {
+									$LDAP_wwwhomepage = "";
+								}
+							}
+
+							//streetaddress
+							$LDAP_streetaddress = "";
+							if (!empty($entries[$x]['streetaddress'][0])) {
+								$LDAP_streetaddress = $entries[$x]['streetaddress'][0];
+								if ($LDAP_streetaddress == "NULL") {
+									$LDAP_streetaddress = "";
+								}
+							}
+
+							//postofficebox
+							$LDAP_postofficebox = "";
+							if (!empty($entries[$x]['postofficebox'][0])) {
+								$LDAP_postofficebox = $entries[$x]['postofficebox'][0];
+								if ($LDAP_postofficebox == "NULL") {
+									$LDAP_postofficebox = "";
+								}
+							}
+
+							//city
+							$LDAP_city = "";
+							if (!empty($entries[$x]['l'][0])) {
+								$LDAP_city = $entries[$x]['l'][0];
+								if ($LDAP_city == "NULL") {
+									$LDAP_city = "";
+								}
+							}
+
+							//plz
+							$LDAP_postalcode = "";
+							if (!empty($entries[$x]['postalcode'][0])) {
+								$LDAP_postalcode = $entries[$x]['postalcode'][0];
+								if ($LDAP_postalcode == "NULL") {
+									$LDAP_postalcode = "";
+								}
+							}
+
+							//region
+							$LDAP_region = "";
+							if (!empty($entries[$x]['st'][0])) {
+								$LDAP_region = $entries[$x]['st'][0];
+								if ($LDAP_region == "NULL") {
+									$LDAP_region = "";
+								}
+							}
+
+							//country
+							$LDAP_country = "";
+							if (!empty($entries[$x]['co'][0])) {
+								$LDAP_country = $entries[$x]['co'][0];
+								if ($LDAP_country == "NULL") {
+									$LDAP_country = "";
+								}
+							}
+
+							//position
+							$LDAP_title = "";
+							if (!empty($entries[$x]['title'][0])) {
+								$LDAP_title = $entries[$x]['title'][0];
+								if ($LDAP_title == "NULL") {
+									$LDAP_title = "";
+								}
+							}
+
+							//department
+							$LDAP_department = "";
+							if (!empty($entries[$x]['department'][0])) {
+								$LDAP_department = $entries[$x]['department'][0];
+								if ($LDAP_department == "NULL") {
+									$LDAP_department = "";
+								}
+							}
+
+							//company
+							$LDAP_company = "";
+							if (!empty($entries[$x]['company'][0])) {
+								$LDAP_company = $entries[$x]['company'][0];
+								if ($LDAP_company == "NULL") {
+									$LDAP_company = "";
+								}
+							}
 
             }
 
@@ -202,9 +311,6 @@ if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
     } //END FALSE !== $result
 
     ldap_unbind($ldap_connection); // Clean up after ourselves.
-    $table .= "</table>"; //close the table
 
 
 } //END ldap_bind
-
-?>
