@@ -3,10 +3,9 @@ session_start();
 
 //LDAP Bind paramters, need to be a normal AD User account.
 
-$_SESSION['username'] =$_POST['username'];
+$ldap_username = $_SESSION['username'] . "@EHH.de";
+$ldap_password = $_SESSION['password'];
 
-$ldap_username = $_POST['username'] . "@EHH.de";
-$ldap_password = $_POST['password'];
 
 $ldap_connection = ldap_connect("ldap://localhost");
 
@@ -32,14 +31,13 @@ if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
 
     if (FALSE !== $result){
         $entries = ldap_get_entries($ldap_connection, $result);
-
         // Uncomment the below if you want to write all entries to debug somethingthing
         //var_dump($entries);
         //die();
 
         //Create a table to display the output
-        echo '<h2>AD User Results</h2></br>';
-        echo '<table border = "1"><tr bgcolor="#cccccc"><td>Username</td><td>Last Name</td><td>First Name</td><td>Company</td><td>Department</td><td>Office Phone</td><td>Fax</td><td>Mobile</td><td>DDI</td><td>E-Mail Address</td><td>Home Phone</td></tr>';
+        $table = '<h2>AD User Results</h2></br>';
+        $table .= '<table border = "1"><tr bgcolor="#cccccc"><td>Username</td><td>Last Name</td><td>First Name</td><td>Company</td><td>Department</td><td>Office Phone</td><td>Fax</td><td>Mobile</td><td>DDI</td><td>E-Mail Address</td><td>Home Phone</td></tr>';
 
         //For each account returned by the search
         for ($x=0; $x<$entries['count']; $x++){
@@ -176,7 +174,27 @@ if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
                     }
                 }
 
-                echo "<tr><td><strong>" . $LDAP_samaccountname . "</strong></td><td>" . $LDAP_LastName . "</td><td>" . $LDAP_FirstName . "</td><td>" . $LDAP_CompanyName . "</td><td>" . $LDAP_Department . "</td><td>" . $LDAP_OfficePhone . "</td><td>" . $LDAP_OfficeFax . "</td><td>" . $LDAP_CellPhone . "</td><td>" . $LDAP_DDI . "</td><td>" . $LDAP_InternetAddress . "</td><td>" . $LDAP_HomePhone . "</td></tr>";
+							//cn
+							$LDAP_cn = "";
+
+							if (!empty($entries[$x]['cn'][0])) {
+								$LDAP_cn = $entries[$x]['cn'][0];
+								if ($LDAP_cn == "NULL") {
+									$LDAP_cn = "";
+								}
+							}
+
+							//description
+							$LDAP_description = "";
+
+							if (!empty($entries[$x]['description'][0])) {
+								$LDAP_description = $entries[$x]['description'][0];
+								if ($LDAP_description == "NULL") {
+									$LDAP_description = "";
+								}
+							}
+
+                $table .= "<tr><td><strong>" . $LDAP_samaccountname . "</strong></td><td>" . $LDAP_LastName . "</td><td>" . $LDAP_FirstName . "</td><td>" . $LDAP_CompanyName . "</td><td>" . $LDAP_Department . "</td><td>" . $LDAP_OfficePhone . "</td><td>" . $LDAP_OfficeFax . "</td><td>" . $LDAP_CellPhone . "</td><td>" . $LDAP_DDI . "</td><td>" . $LDAP_InternetAddress . "</td><td>" . $LDAP_HomePhone . "</td></tr>";
 
             }
 
@@ -184,7 +202,8 @@ if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
     } //END FALSE !== $result
 
     ldap_unbind($ldap_connection); // Clean up after ourselves.
-    echo("</table>"); //close the table
+    $table .= "</table>"; //close the table
+
 
 } //END ldap_bind
 

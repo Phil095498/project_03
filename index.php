@@ -11,7 +11,7 @@
     <link href="css/grid.css" rel="stylesheet">
 </head>
 <body class="container-fluid">
-    <form class="form-center" action="loginUser.php" method="post">
+    <form class="form-center" action="showData.php" method="post">
         <span class="row heading">Anmeldung</span>
         <div class="inputs row">
             <div class="row margin-b15">
@@ -32,3 +32,4 @@
     </form>
 </body>
 </html>
+
