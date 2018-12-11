@@ -93,7 +93,13 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/deleteData.php" />
         <option value="$PROJECT_DIR$/showData.php" />
+        <option value="$PROJECT_DIR$/fpdf181/Login.php" />
+        <option value="$PROJECT_DIR$/Login.php" />
         <option value="$PROJECT_DIR$/pdfCreator.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/loginUser.php" />
+        <option value="$PROJECT_DIR$/ldapTest.php" />
+        <option value="$PROJECT_DIR$/ldapTest2.php" />
       </list>
     </option>
   </component>
@@ -109,18 +115,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="project_03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project_03" type="462c0819:PsiDirectoryNode" />
+              <item name="ae_projekt_03" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ae_projekt_03" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -163,6 +169,7 @@
       <workItem from="1544176112397" duration="900000" />
       <workItem from="1544177120530" duration="4805000" />
       <workItem from="1544435052669" duration="864000" />
+      <workItem from="1544513567501" duration="2496000" />
     </task>
     <task id="LOCAL-00001" summary="adds fpdf">
       <created>1544181187802</created>
@@ -178,10 +185,10 @@
     <option name="totallyTimeSpent" value="19817000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15266559" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11610738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -244,7 +251,7 @@
     <entry file="file://$PROJECT_DIR$/FPDF.php" />
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
+        <state>
           <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
         </state>
       </provider>
@@ -252,9 +259,11 @@
     <entry file="file://$PROJECT_DIR$/css/grid.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/fpdf181/Login.php" />
+    <entry file="file://$PROJECT_DIR$/Login.php" />
     <entry file="file://$PROJECT_DIR$/fpdf181/fpdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
+        <state relative-caret-position="1343">
           <caret line="575" column="9" selection-start-line="575" selection-start-column="9" selection-end-line="575" selection-end-column="9" />
         </state>
       </provider>

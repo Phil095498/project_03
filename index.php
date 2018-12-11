@@ -11,13 +11,13 @@
     <link href="css/grid.css" rel="stylesheet">
 </head>
 <body class="container-fluid">
-    <form class="form-center" action="" method="post">
+    <form class="form-center" action="loginUser.php" method="post">
         <span class="row heading">Anmeldung</span>
         <div class="inputs row">
             <div class="row margin-b15">
                 <span class="col-sm-12">Geben Sie Ihren Nutzernamen ein!</span>
                 <div  class="col-sm-10">
-                    <input  type="text"  placeholder="username"  name="name" required>
+                    <input  type="text"  placeholder="username"  name="username" required>
                 </div>
             </div>
             <div class="row margin-b15">
@@ -26,7 +26,7 @@
                     <input  type="password" placeholder="password"  name="password" required>
                 </div>
             </div>
-            <button type="submit" id="sendButton" class="btn-submit" disabled>Anmelden</button>
+            <button type="submit" id="sendButton" class="btn-submit">Anmelden</button>
             <button type="reset" class="btn-reset margin-l15">Reset</button>
         </div>
     </form>
