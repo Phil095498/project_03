@@ -15,7 +15,7 @@ $pdf->Cell(40,10,utf8_decode("gehen Sie bitte einen Schritt zurück und klicken 
 $pdf->Cell(40,10,"",0, 5);
 
 $pdf->Cell(40,10,"Anzeigename: " . utf8_decode($LDAP_cn),0, 6);
-$pdf->Cell(40,10,"Benutzername: " . utf8_decode($LDAP_LastName),0, 7);
+$pdf->Cell(40,10,"Benutzername: " . utf8_decode($LDAP_samaccountname),0, 7);
 $pdf->Cell(40,10,"Nachname: " . utf8_decode($LDAP_LastName),0, 8);
 $pdf->Cell(40,10,"Vorname: " . utf8_decode($LDAP_FirstName),0, 9);
 $pdf->Cell(40,10,"Beschreibung: " . utf8_decode($LDAP_description),0, 10);
