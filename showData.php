@@ -1,7 +1,7 @@
+<?php
+    session_start();
+?>
 <head>
-	<?php
-	session_start();
-	?>
 	<title>
 		Projekt 03 - AE
 	</title>
@@ -9,8 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href="css/styles.css" rel="stylesheet">
-	<link href="css/grid.css" rel="stylesheet">
-
 </head>
 <body class="container-fluid">
 	<form class="form-center" action="pdfCreator.php" method="post">
@@ -24,10 +22,10 @@
 			<button type="submit" id="sendButtonShowData" class="btn-submit">Daten anfordern!</button>
 		</div>
 	</form>
-    <form class="form-center" action="deleteData.php" method="post">
-        <button type="submit" id="deleteButtonData" class="btn-submit">Daten löschen!</button>
+    <form class="form-center" action="sendPDF.php" method="post">
+        <button type="submit" name="mailing" class="btn-submit">Daten per Mail anfordern</button>
     </form>
-    <form class="form-center" action="index.php" method="post">
-        <button type="submit" name="logout" class="btn-submit">Logout</button>
+    <form class="form-center" action="logout.php" method="post">
+        <button type="submit" name="logout" class="btn-submit btn-logout">Logout</button>
     </form>
 </body>

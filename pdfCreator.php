@@ -29,4 +29,4 @@ $pdf->Cell(40,10,"Position: " . utf8_decode($LDAP_title),0, 17);
 $pdf->Cell(40,10,"Abteilung: " . utf8_decode($LDAP_department),0, 18);
 $pdf->Cell(40,10,"Firma: " . utf8_decode($LDAP_company),0, 19);
 
-$pdf->Output();
+$pdf->Output("I","GespeicherteDaten.pdf");
