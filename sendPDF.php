@@ -11,8 +11,8 @@ include "loginUser.php";
 			<span class="row heading">PDF per E-Mail versenden</span>
 			<div class="inputs row">
 				<div class="row margin-b15">
-					<span class="col-sm-12">Geben Sie Ihre E-Mail an!</span>
-					<div  class="col-sm-10">
+					<span class="subtitle">Geben Sie Ihre E-Mail an!</span>
+					<div>
 						<input  type="text"  placeholder="E-Mail"  name="mail" required>
 					</div>
 				</div>

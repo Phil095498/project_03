@@ -34,13 +34,15 @@ button:enabled {
 
 .heading {
     font-size: 38px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-top: 10px;
+    width: 100%;
 }
 
 .subtext {
     margin-bottom: 15px;
     color: rgba(0, 0, 0, 0.60);
+    width: 100%;
 }
 
 .form-center {
@@ -79,4 +81,8 @@ button:enabled {
 
 .btn-logout:hover {
     background: #9b0000;
+}
+
+.subtitle {
+    color: grey;
 }

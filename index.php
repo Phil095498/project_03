@@ -15,14 +15,14 @@
             <span class="row heading">Anmeldung</span>
             <div class="inputs row">
                 <div class="row margin-b15">
-                    <span class="col-sm-12">Geben Sie Ihren Nutzernamen ein!</span>
-                    <div  class="col-sm-10">
+                    <span class="subtitle">Geben Sie Ihren Nutzernamen ein!</span>
+                    <div>
                         <input  type="text"  placeholder="Username"  name="username" required>
                     </div>
                 </div>
                 <div class="row margin-b15">
-                    <span class="col-sm-12">Geben Sie Ihr Passwort ein!</span>
-                    <div  class="col-sm-10">
+                    <span class="subtitle">Geben Sie Ihr Passwort ein!</span>
+                    <div>
                         <input  type="password" placeholder="Password"  name="password" required>
                     </div>
                 </div>

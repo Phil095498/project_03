@@ -16,9 +16,9 @@
 			$_SESSION['username'] = $_POST['username'];
 			$_SESSION['password'] = $_POST['password'];
 			?>
-		<span class="row heading">Personenbezogene Daten</span>
-        <span class="row subtext">Sie können hier Ihre personenbezogenen Daten anfordern oder löschen.</span>
-		<div class="inputs row">
+		<span class="heading">Personenbezogene Daten</span>
+        <p class="subtext">Sie können hier Ihre personenbezogenen Daten anfordern.</p>
+		<div class="inputs">
 			<button type="submit" id="sendButtonShowData" class="btn-submit">Daten anfordern!</button>
 		</div>
 	</form>
