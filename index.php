@@ -26,8 +26,8 @@
                         <input  type="password" placeholder="Password"  name="password" required>
                     </div>
                 </div>
-                <button type="submit" id="sendButton" class="btn-submit button">Anmelden</button>
-                <button type="reset" class="btn-reset margin-l15 button">Reset</button>
+                <button type="submit" id="sendButton" class="btn-submit button button-h">Anmelden</button>
+                <button type="reset" class="btn-reset margin-l15 button button-h">Reset</button>
             </div>
         </form>
     </div>

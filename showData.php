@@ -19,11 +19,11 @@
 		<span class="heading">Personenbezogene Daten</span>
         <p class="subtext">Sie können hier Ihre personenbezogenen Daten anfordern.</p>
 		<div class="inputs">
-			<button type="submit" id="sendButtonShowData" class="btn-submit">Daten anfordern!</button>
+			<button type="submit" id="sendButtonShowData" class="btn-submit button-h">Daten anfordern!</button>
 		</div>
 	</form>
     <form class="form-center" action="sendPDF.php" method="post">
-        <button type="submit" name="mailing" class="btn-submit">Daten per Mail anfordern</button>
+        <button type="submit" name="mailing" class="btn-submit" disabled>Daten per Mail anfordern</button>
     </form>
     <form class="form-center" action="logout.php" method="post">
         <button type="submit" name="logout" class="btn-submit btn-logout">Logout</button>

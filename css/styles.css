@@ -17,7 +17,7 @@ button {
     margin-bottom: 15px;
 }
 
-button:hover {
+.button-h:hover {
     background: #3359b9;
 }
 
