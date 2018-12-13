@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-//LDAP Bind paramters, need to be a normal AD User account.
 
 $ldap_username = $_SESSION['username'] . "@EHH.de";
 $ldap_password = $_SESSION['password'];
@@ -10,13 +9,11 @@ $ldap_password = $_SESSION['password'];
 $ldap_connection = ldap_connect("ldap://localhost");
 
 if (FALSE === $ldap_connection){
-    // Uh-oh, something is wrong...
     echo 'Unable to connect to the ldap server';
 }
 
-// We have to set this option for the version of Active Directory we are using.
 ldap_set_option($ldap_connection, LDAP_OPT_PROTOCOL_VERSION, 3) or die('Unable to set LDAP protocol version');
-ldap_set_option($ldap_connection, LDAP_OPT_REFERRALS, 0); // We need this for doing an LDAP search.
+ldap_set_option($ldap_connection, LDAP_OPT_REFERRALS, 0);
 
 if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
 
@@ -37,10 +34,6 @@ if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
 
             if (($entries[$x]['samaccountname'][0]) == $_SESSION['username']) {
 
-
-                //
-                //Retrieve values from Active Directory
-                //
 
                 //Windows Usernaame
                 $LDAP_samaccountname = "";
@@ -307,10 +300,10 @@ if (TRUE === ldap_bind($ldap_connection, $ldap_username, $ldap_password)){
 
             }
 
-        } //END for loop
-    } //END FALSE !== $result
+        }
+    }
 
-    ldap_unbind($ldap_connection); // Clean up after ourselves.
+    ldap_unbind($ldap_connection);
 
 
-} //END ldap_bind
+}
